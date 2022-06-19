@@ -1,0 +1,87 @@
+body {
+  background-color: #000e0d;
+  background-image: url("../public/images/header.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: #ffffff;
+}
+.box-glass {
+  background: rgba(0, 47, 44, 0.25);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 8px;
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.form-control:focus,
+.form-control:focus-within {
+  outline: none;
+  box-shadow: none;
+}
+
+.pagination .page-item .page-link {
+  outline: none;
+  box-shadow: none;
+}
+
+.pagination .page-item .page-link {
+  background-color: #000e0d;
+  color: #fff;
+}
+
+.pagination .page-item.disabled .page-link {
+  background-color: #000e0d;
+  color: rgb(129, 129, 129);
+  border: solid 1px rgb(129, 129, 129) !important;
+}
+
+.pagination .page-item.disabled > .page-link:focus,
+.pagination .page-item.disabled > .page-link:hover,
+.pagination .page-item.disabled > .page-link:focus,
+.pagination .page-item.disabled > .page-link:hover {
+  background-color: #000e0d;
+  color: rgb(129, 129, 129);
+  border: solid 1px rgb(129, 129, 129) !important;
+}
+
+.pagination .page-item > .page-link:focus,
+.pagination .page-item > .page-link:hover,
+.pagination .page-item > .page-link:focus,
+.pagination .page-item > .page-link:hover {
+  color: #333;
+  background-color: #fff !important;
+  border: solid 1px #fff !important;
+}
+
+.pagination .page-item.active .page-link {
+  color: #333;
+  background-color: #fff !important;
+  border: solid 1px #fff !important;
+}
+
+.pagination .page-item.active .page-link:hover {
+  background-color: #fff !important;
+  border: solid 1px #fff !important;
+}
+
+.loading {
+  animation: scale 3s;
+  animation-iteration-count: 100;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
