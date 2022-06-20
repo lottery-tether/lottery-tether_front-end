@@ -24,18 +24,10 @@ export default function Home() {
   })
 
   useEffect(() => {
-    // setLoading(true)
-    // axios.post(`${process.env.NEXT_PUBLIC_BASE_URL}analytics`).then(response => {
-    //   setData(response.data)
-    //   setLoading(false)
-    // })
-    setLoading(false)
-    setData({
-      money_count: 5000,
-      gamers_count: 200,
-      time_remaining: 324505,
-      money_lottery: 10,
-      money_lottery_unit: 'k'
+    setLoading(true)
+    axios.post(`${process.env.NEXT_PUBLIC_BASE_URL}analytics`).then(response => {
+      setData(response.data)
+      setLoading(false)
     })
   }, [])
 
