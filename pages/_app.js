@@ -3,7 +3,7 @@ import Head from 'next/head'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'noty/src/noty.scss'
 import 'noty/src/themes/metroui.scss'
-import '../styles/App.css';
+import '../styles/app.css';
 
 
 function MyApp({ Component, pageProps }) {
