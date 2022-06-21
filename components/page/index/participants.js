@@ -39,13 +39,13 @@ function Participants({ reloadRanking, setReloadRanking }) {
 
     return (
         <>
-            <Row className='pb-3'>
-                <Col className='d-flex align-items-center justify-content-between'>
-                    <div className='d-flex'>
-                        <Image src='/images/title-icon.svg' alt="" width={25} height={7} />
+            <Row>
+                <Col className='d-flex flex-column flex-sm-row align-items-center justify-content-between col'>
+                    <div className='d-flex pb-3'>
+                        <Image src='/images/title-icon.svg' alt="" width={25} height={7} priority={true} />
                         <h4 className='m-0 ps-2'>Participants</h4>
                     </div>
-                    <div>
+                    <div className='pb-3'>
                         <Form.Control
                             name='nickname'
                             style={{ backgroundColor: '#000E0D', color: '#ccc' }}
@@ -96,7 +96,7 @@ function Participants({ reloadRanking, setReloadRanking }) {
                     {loading ? (
                         <div className='position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center' style={{ background: '#000e0dd1', borderRadius: '4px', zIndex: '3' }}>
                             <div style={{ width: '64px' }} className="loading">
-                                <Image src='/images/logo192.png' alt="" width='100%' height="100%" />
+                                <Image src='/images/logo192.png' alt="" width='100%' height="100%" priority={true} />
                             </div>
                         </div>
                     ) : ''}

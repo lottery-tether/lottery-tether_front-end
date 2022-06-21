@@ -11,7 +11,8 @@ function Email() {
             validationSchema={Yup.object().shape({
                 email: Yup.string()
                     .email()
-                    .required(),
+                    .required()
+                    .label('Email'),
             })}
             onSubmit={(values, { setSubmitting, resetForm }) => {
                 axios.post(`${process.env.NEXT_PUBLIC_BASE_URL}sendemail`, {
@@ -61,7 +62,7 @@ function Email() {
                 isSubmitting,
             }) => (
                 <Form noValidate onSubmit={handleSubmit}>
-                    <Row className='align-items-end'>
+                    <Row className={errors.email ? `align-items-center` : `align-items-end`}>
                         <Col md={{ span: 9 }}>
                             <Form.Group className="mb-3" controlId="NickName">
                                 <Form.Label>Email</Form.Label>
@@ -73,8 +74,11 @@ function Email() {
                                     style={{ backgroundColor: '#000E0D', color: '#ccc' }}
                                     autoComplete='off'
                                     type="email"
-                                    isInvalid={!!errors.txid}
+                                    isInvalid={!!errors.email}
                                     placeholder="Type Your Email Address..." />
+                                <Form.Control.Feedback type="invalid">
+                                    {errors.email}
+                                </Form.Control.Feedback>
                             </Form.Group>
                         </Col>
                         <Col md={{ span: 3 }} className="mb-3">

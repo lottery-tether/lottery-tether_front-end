@@ -13,8 +13,9 @@ function Ticket({ setReloadRanking }) {
                 initialValues={{ txid: '', nickname: '' }}
                 validationSchema={Yup.object().shape({
                     txid: Yup.string()
-                        .required(),
-                    nickname: Yup.string(),
+                        .required()
+                        .label('TXID'),
+                    nickname: Yup.string().label('Nickname'),
                 })}
                 onSubmit={(values, { setSubmitting, resetForm }) => {
                     axios.post(`${process.env.NEXT_PUBLIC_BASE_URL}sendtxid`, {
@@ -71,7 +72,7 @@ function Ticket({ setReloadRanking }) {
                             <Col>
                                 <Card className='box-glass border-0'>
                                     <Card.Body>
-                                        <Row className=' align-items-end'>
+                                        <Row className='align-items-end'>
                                             <Col lg={{ span: 7 }}>
                                                 <Form.Group className="mb-3" controlId="TXID">
                                                     <InputGroup hasValidation>
@@ -116,7 +117,7 @@ function Ticket({ setReloadRanking }) {
                                             </Col>
                                             <Col lg={{ span: 5 }} className='mt-3 mx-auto'>
                                                 <div className="d-grid gap-2">
-                                                    <Button disabled={isSubmitting} variant="outline-light" type="submit" size="lg">
+                                                    <Button disabled={isSubmitting} variant="outline-info" type="submit" size="lg">
                                                         {isSubmitting ? 'Submitting...' : 'Submit'}
                                                     </Button>
                                                 </div>

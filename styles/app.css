@@ -85,3 +85,55 @@ body {
     transform: scale(1);
   }
 }
+
+/* media max-width: 576px */
+.box-counter {
+  width: 30px;
+  font-size: calc(1rem + 0.6vw);
+}
+
+.box-slogan {
+  width: 100%;
+}
+
+.wallet-text {
+  font-size: 16px;
+}
+
+@media (min-width: 576px) {
+  .box-counter {
+    width: 50px;
+    font-size: calc(1.3rem + 0.6vw);
+  }
+  .wallet-text {
+    font-size: calc(1.3rem + 0.6vw);
+  }
+}
+
+@media (min-width: 768px) {
+  .box-counter {
+    width: 60px;
+  }
+}
+
+@media (min-width: 992px) {
+  .box-counter {
+    width: 50px;
+  }
+
+  .box-slogan {
+    width: 75%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .box-counter {
+    width: 60px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .box-counter {
+    width: 60px;
+  }
+}

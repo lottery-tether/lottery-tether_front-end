@@ -40,10 +40,10 @@ function CountDown({ time_remaining }) {
     return (
         <>
             <Col className='d-flex align-items-center pb-3' lg={{ span: 11 }}>
-                <Image src='/images/title-icon.svg' alt="" width={25} height={7} />
-                <h4 className='m-0 ps-2'>{title}</h4>
+                <Image src='/images/title-icon.svg' alt="" width={25} height={7} priority={true} />
+                <h5 className='m-0 ps-2'>{title}</h5>
             </Col>
-            <Col className='mb-3' lg={{ span: 7 }}>
+            <Col className='mb-5' lg={{ span: 7 }}>
                 <Row>
                     {
                         finishTime ? (
@@ -51,32 +51,32 @@ function CountDown({ time_remaining }) {
                                 <Col className='d-flex justify-content-center justify-content-lg-start'>
                                     <div className="d-flex flex-column align-items-center">
                                         <div className='d-flex'>
-                                            <div style={{ width: '40px' }} className='h3 border rounded py-2 text-center me-1'>{countDownTime.days.charAt(0)}</div>
-                                            <div style={{ width: '40px' }} className='h3 border rounded py-2 text-center'>{countDownTime.days.charAt(1)}</div>
+                                            <div className='box-counter border rounded py-2 text-center me-1'>{countDownTime.days.charAt(0)}</div>
+                                            <div className='box-counter border rounded py-2 text-center'>{countDownTime.days.charAt(1)}</div>
                                         </div>
                                         <div className='text-secondary'>Days</div>
                                     </div>
-                                    <div className='h3 mx-2 py-2'>:</div>
+                                    <div className='h3 mx-1 py-2'>:</div>
                                     <div className="d-flex flex-column align-items-center">
                                         <div className='d-flex'>
-                                            <div style={{ width: '40px' }} className='h3 border rounded py-2 text-center me-1'>{countDownTime.hours.charAt(0)}</div>
-                                            <div style={{ width: '40px' }} className='h3 border rounded py-2 text-center'>{countDownTime.hours.charAt(1)}</div>
+                                            <div className='box-counter border rounded py-2 text-center me-1'>{countDownTime.hours.charAt(0)}</div>
+                                            <div className=' box-counter border rounded py-2 text-center'>{countDownTime.hours.charAt(1)}</div>
                                         </div>
                                         <div className='text-secondary'>Hours</div>
                                     </div>
-                                    <div className='h3 mx-2 py-2'>:</div>
+                                    <div className='h3 mx-1 py-2'>:</div>
                                     <div className="d-flex flex-column align-items-center">
                                         <div className='d-flex'>
-                                            <div style={{ width: '40px' }} className='h3 border rounded py-2 text-center me-1'>{countDownTime.minutes.charAt(0)}</div>
-                                            <div style={{ width: '40px' }} className='h3 border rounded py-2 text-center'>{countDownTime.minutes.charAt(1)}</div>
+                                            <div className='box-counter border rounded py-2 text-center me-1'>{countDownTime.minutes.charAt(0)}</div>
+                                            <div className='box-counter border rounded py-2 text-center'>{countDownTime.minutes.charAt(1)}</div>
                                         </div>
                                         <div className='text-secondary'>Minutes</div>
                                     </div>
-                                    <div className='h3 mx-2 py-2'>:</div>
+                                    <div className='h3 mx-1 py-2'>:</div>
                                     <div className="d-flex flex-column align-items-center">
                                         <div className='d-flex'>
-                                            <div style={{ width: '40px' }} className='h3 border rounded py-2 text-center me-1'>{countDownTime.seconds.charAt(0)}</div>
-                                            <div style={{ width: '40px' }} className='h3 border rounded py-2 text-center'>{countDownTime.seconds.charAt(1)}</div>
+                                            <div className='box-counter border rounded py-2 text-center me-1'>{countDownTime.seconds.charAt(0)}</div>
+                                            <div className='box-counter border rounded py-2 text-center'>{countDownTime.seconds.charAt(1)}</div>
                                         </div>
                                         <div className='text-secondary'>Seconds</div>
                                     </div>
@@ -88,32 +88,32 @@ function CountDown({ time_remaining }) {
                                 <Col className='d-flex justify-content-center justify-content-lg-start'>
                                     <div className="d-flex flex-column align-items-center">
                                         <div className='d-flex'>
-                                            <div style={{ width: '40px' }} className='h3 border rounded py-2 text-center me-1'>{countDownTime.days.charAt(0)}</div>
-                                            <div style={{ width: '40px' }} className='h3 border rounded py-2 text-center'>{countDownTime.days.charAt(1)}</div>
+                                            <div className='box-counter border rounded py-2 text-center me-1'>{countDownTime.days.charAt(0)}</div>
+                                            <div className='box-counter border rounded py-2 text-center'>{countDownTime.days.charAt(1)}</div>
                                         </div>
                                         <div className='text-secondary'>Days</div>
                                     </div>
-                                    <div className='h3 mx-2 py-2'>:</div>
+                                    <div className='h3 mx-1 py-2'>:</div>
                                     <div className="d-flex flex-column align-items-center">
                                         <div className='d-flex'>
-                                            <div style={{ width: '40px' }} className='h3 border rounded py-2 text-center me-1'>{countDownTime.hours.charAt(0)}</div>
-                                            <div style={{ width: '40px' }} className='h3 border rounded py-2 text-center'>{countDownTime.hours.charAt(1)}</div>
+                                            <div className='box-counter border rounded py-2 text-center me-1'>{countDownTime.hours.charAt(0)}</div>
+                                            <div className='box-counter border rounded py-2 text-center'>{countDownTime.hours.charAt(1)}</div>
                                         </div>
                                         <div className='text-secondary'>Hours</div>
                                     </div>
-                                    <div className='h3 mx-2 py-2'>:</div>
+                                    <div className='h3 mx-1 py-2'>:</div>
                                     <div className="d-flex flex-column align-items-center">
                                         <div className='d-flex'>
-                                            <div style={{ width: '40px' }} className='h3 border rounded py-2 text-center me-1'>{countDownTime.minutes.charAt(0)}</div>
-                                            <div style={{ width: '40px' }} className='h3 border rounded py-2 text-center'>{countDownTime.minutes.charAt(1)}</div>
+                                            <div className='box-counter border rounded py-2 text-center me-1'>{countDownTime.minutes.charAt(0)}</div>
+                                            <div className='box-counter border rounded py-2 text-center'>{countDownTime.minutes.charAt(1)}</div>
                                         </div>
                                         <div className='text-secondary'>Minutes</div>
                                     </div>
-                                    <div className='h3 mx-2 py-2'>:</div>
+                                    <div className='h3 mx-1 py-2'>:</div>
                                     <div className="d-flex flex-column align-items-center">
                                         <div className='d-flex'>
-                                            <div style={{ width: '40px' }} className='h3 border rounded py-2 text-center me-1'>{countDownTime.seconds.charAt(0)}</div>
-                                            <div style={{ width: '40px' }} className='h3 border rounded py-2 text-center'>{countDownTime.seconds.charAt(1)}</div>
+                                            <div className='box-counter border rounded py-2 text-center me-1'>{countDownTime.seconds.charAt(0)}</div>
+                                            <div className='box-counter border rounded py-2 text-center'>{countDownTime.seconds.charAt(1)}</div>
                                         </div>
                                         <div className='text-secondary'>Seconds</div>
                                     </div>
